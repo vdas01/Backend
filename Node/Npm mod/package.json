@@ -1,0 +1,19 @@
+{
+  "name": "npm-mod",
+  "version": "1.0.0",
+  "description": "npm mod tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vishal",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "chalk-animation": "^2.0.2",
+    "gradient-string": "^2.0.1",
+    "node-fetch": "^2.6.6",
+    "validator": "^13.7.0"
+  },
+  "type": "module"
+}
