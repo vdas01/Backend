@@ -4,6 +4,7 @@ const path = require('path');
 
 //when views folder name changed
 const templatePath = path.join(__dirname, './templates');
+app.set('view engine','hbs');
 app.set('views',templatePath);
 
 //template engine route ,

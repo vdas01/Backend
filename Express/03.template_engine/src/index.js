@@ -7,11 +7,10 @@ const staticPath = path.join(__dirname,'../public');
 
 //to set the view engine
 app.set("view engine",'hbs');
+//built-in middleware
+app.use(express.static(staticPath))
 
 
-//when views folder name changed
-// const templatePath = path.join(__dirname, './templates');
-// app.set('views',templatePath);
 
 //template engine route ,
 app.get('/',(req,res)=>{
@@ -24,8 +23,7 @@ app.get('/about',(req,res)=>{
     res.render('contact');
 })
 
-//built-in middleware
-// app.use(express.static(staticPath))
+
 
 app.get('/', (req, res) => {
     res.send('Hello World!')

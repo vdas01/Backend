@@ -34,10 +34,12 @@ app.get('/about',(req,res)=>{
               `http://api.openweathermap.org/data/2.5/weather?q=${req.query.name}&units=metric&appid=c33820c4e1eccf6ddb4f7c2f496b60e8`
             )
               .on("data", (chunk) => {
-                // console.log(req.query);
+                console.log(req.query);
                 const objdata = JSON.parse(chunk);
+              
                 const arrData = [objdata];
-                // console.log(arrData[0].main);
+                // console.log(arrData);
+                res.send(arrData)
                 res.write(arrData[0].name);
               })
               .on("end", (err) => {
